@@ -17,7 +17,7 @@ exports.LoadUtils = () => {
     window.WWebJS.sendSeen = async (chatId) => {
         const chat = await window.WWebJS.getChat(chatId, { getAsModel: false });
         if (chat) {
-            await window.Store.SendSeen.sendSeen(chat, false);
+            await window.Store.SendSeen.sendSeen(chat);
             return true;
         }
         return false;
